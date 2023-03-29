@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Powerful Axes</title>
+    <style>
+        /* Set the background color to a dark blue */
+        body {
+            background-color: #262626;
+        }
+
+        /* Add a gradient effect to the page header */
+        .header {
+            background: linear-gradient(to bottom right, #ff9900, #ff5f6d);
+            color: white;
+            text-align: center;
+            padding: 1em;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px #333333;
+        }
+
+        /* Style the spinning axes */
+        .axes {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 2em auto;
+        }
+
+        .axes:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            border: 8px solid #ff9900;
+            border-radius: 50%;
+            animation: spin 2s infinite linear;
+        }
+
+        .axes:after {
+            content: "";
+            position: absolute;
+            top: 75px;
+            left: 75px;
+            width: 50px;
+            height: 50px;
+            border: 8px solid #ff5f6d;
+            border-radius: 50%;
+            animation: spin 1s infinite linear reverse;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Powerful Axes</div>
+    <div class="axes"></div>
+</body>
+</html>
